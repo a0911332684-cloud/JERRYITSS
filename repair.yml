@@ -1,0 +1,33 @@
+name: 🛠 工作室報修申請
+description: 請填寫以下資訊以便安排維修
+title: "[報修] "
+labels: ["待處理"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 報修類別
+      options:
+        - 網路設備 (Aruba/Cisco)
+        - 伺服器 (VMware/Windows)
+        - ERP 系統 (鼎新)
+        - 其他硬體
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 緊急程度
+      options:
+        - 低 (一般維護)
+        - 中 (影響部分功能)
+        - 高 (系統停擺)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      placeholder: 請詳細說明故障狀況或錯誤代碼...
+    validations:
+      required: true
